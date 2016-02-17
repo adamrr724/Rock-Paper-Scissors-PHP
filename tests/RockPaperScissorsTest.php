@@ -83,14 +83,28 @@
         {
             //Arrange
             $test_RockPaperScissors = new RockPaperScissors;
-            $user_input = "Scissors";
+            $user_input = "";
 
 
             //Array
             $result = $test_RockPaperScissors->computerPlay($user_input);
 
             //Assert
-            $this->assertTrue(is_integer($result));
+            $this->assertTrue(is_string($result));
+        }
+
+        function test_computer_as_rock()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $user_input = "Rock";
+
+
+            //Array
+            $result = $test_RockPaperScissors->computerPlay($user_input);
+
+            //Assert
+            $this->assertEquals("Player 1 Wins!", $result);
         }
 
     }
