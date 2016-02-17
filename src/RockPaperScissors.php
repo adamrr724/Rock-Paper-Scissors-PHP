@@ -10,6 +10,21 @@ class RockPaperScissors
             return "Player 2 Wins!";
         } return "Tie Game!";
     }
+
+    function computerPlay($user_input)
+    {
+        $random_num = rand(1, 3);
+        
+        return $random_num;
+
+
+
+        // if ($first_input == "Rock" && $second_input == "Scissors" || $first_input == "Paper" && $second_input == "Rock" || $first_input == "Scissors" && $second_input == "Paper") {
+        //     return "Player 1 Wins!";
+        // } elseif ($second_input == "Rock" && $first_input == "Scissors" || $second_input == "Paper" && $first_input == "Rock" || $second_input == "Scissors" && $first_input == "Paper") {
+        //     return "Player 2 Wins!";
+        // } return "Tie Game!";
+    }
 }
 
 ?>

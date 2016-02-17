@@ -79,6 +79,20 @@
             $this->assertEquals("Player 2 Wins!", $result);
         }
 
+        function test_computer_randomnum()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $user_input = "Scissors";
+
+
+            //Array
+            $result = $test_RockPaperScissors->computerPlay($user_input);
+
+            //Assert
+            $this->assertTrue(is_integer($result));
+        }
+
     }
 
 
