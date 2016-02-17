@@ -16,8 +16,9 @@
             $result = $test_RockPaperScissors->playGame($first_input, $second_input);
 
             //Assert
-            $this->assertEquals("Tie Game", $result);
+            $this->assertEquals("Tie Game!", $result);
         }
+
         function test_rock_vs_scissors()
         {
             //Arrange
@@ -30,7 +31,52 @@
             $result = $test_RockPaperScissors->playGame($first_input, $second_input);
 
             //Assert
-            $this->assertEquals("Rock Wins!", $result);
+            $this->assertEquals("Player 1 Wins!", $result);
+        }
+
+        function test_rock_vs_paper()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $first_input = "Paper";
+            $second_input = "Rock";
+
+
+            //Array
+            $result = $test_RockPaperScissors->playGame($first_input, $second_input);
+
+            //Assert
+            $this->assertEquals("Player 1 Wins!", $result);
+        }
+
+        function test_paper_vs_scissors()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $first_input = "Scissors";
+            $second_input = "Paper";
+
+
+            //Array
+            $result = $test_RockPaperScissors->playGame($first_input, $second_input);
+
+            //Assert
+            $this->assertEquals("Player 1 Wins!", $result);
+        }
+
+        function test_paper_playertwo_wins()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $first_input = "Scissors";
+            $second_input = "Rock";
+
+
+            //Array
+            $result = $test_RockPaperScissors->playGame($first_input, $second_input);
+
+            //Assert
+            $this->assertEquals("Player 2 Wins!", $result);
         }
 
     }
