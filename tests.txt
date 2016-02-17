@@ -1,0 +1,9 @@
+TESTS
+
+1. Equal inputs equal a tie
+
+2. Rock vs scissors equals Rock W
+
+3. Rock vs paper equals Paper W
+
+4. Paper vs scissors equals Scissors W
