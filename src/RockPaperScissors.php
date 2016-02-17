@@ -3,7 +3,7 @@
 class RockPaperScissors
 {
     private $user_input;
-    private $computer_input;
+    public $computer_input;
     // private $first_input;
     // private $second_input;
 
