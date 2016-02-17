@@ -16,11 +16,11 @@
         return $app['twig']->render('form_computer.html.twig');
     });
 
-    // $app->get('/results', function() use ($app) {
-    //     $Game = new RockPaperScissors();
-    //     $result = $Game->playGame($_GET['player1'], $_GET['player2']);
-    //     return $app['twig']->render('results.html.twig', array('results' => $result));
-    // });
+    $app->get('/results', function() use ($app) {
+        $Game = new RockPaperScissors($_GET['player1']);
+        $result = $Game->playGame($_GET['player1'], $_GET['player2']);
+        return $app['twig']->render('results.html.twig', array('results' => $result));
+    });
 
     $app->get('/results_computer', function() use ($app) {
         $Game = new RockPaperScissors($_GET['player1']);
