@@ -2,14 +2,29 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+                 <link rel="stylesheet" href="/css/styles.css" media="all">
         <meta charset="utf-8">
         <title>Winner Page</title>
     </head>
     <body>
-        <h1>Winner:</h1>
-         <h3>{{ results }}</h3>
-         <br>
-        <a href="/">Play Again!</a>
+        <div class="container">
+            <div class="jumbotron">
+                <h1>Winner</h1>
+            </div>
+            {% if results == "Player 1 Wins!" %}
+             <h3>{{ results }}</h3>
+             <img class="winner" src="https://uberfacts.files.wordpress.com/2012/10/rock-paper-and-scissors.jpeg" alt="drawing of rock beats up paper and scissors" />
+            {% elseif results == "Player 2 Wins!" %}
+            <h3>{{ results }}</h3>
+            <img class="winner" src="http://data.whicdn.com/images/5392083/large.gif" alt="paper attacking rock" />
+            {% else %}
+                <h3>{{ results }}</h3>
+                <img src="http://www.teampedia.net/wiki/images/0/0b/Rock.png" alt="rock paper scissors drawing" />
+            {% endif %}
+             <br>
+             <button type="button" class= "btn btn-info" name="button"><a href="/">Play Again!</a></button>
+
+        </div>
 
     </body>
 </html>
