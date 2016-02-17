@@ -4,4 +4,19 @@
 
     $app = new Silex\Application();
 
+    $app->register(new Silex\Provider\TwigServiceProvider(), array(
+    	'twig.path' => __DIR__.'/../views'
+    ));
+
+    $app->get('/', function() use ($app) {
+        return $app['twig']->render('form.html.twig');
+    });
+
+    $app->get('/results', function() use ($app) {
+        $Game = new RockPaperScissors();
+        $Game->playGame($_GET['player1'], $_GET['player2']);
+        return $app['twig']->render('results.html.twig');
+    });
+
+    return $app;
 ?>
