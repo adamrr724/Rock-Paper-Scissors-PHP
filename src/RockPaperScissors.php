@@ -6,7 +6,10 @@ class RockPaperScissors
     {
         if ($first_input == $second_input) {
             return "Tie Game";
+        } elseif ($first_input == "Rock" && $second_input == "Scissors") {
+            return "Rock Wins!";
         }
+
     }
 
 

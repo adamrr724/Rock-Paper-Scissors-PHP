@@ -18,6 +18,20 @@
             //Assert
             $this->assertEquals("Tie Game", $result);
         }
+        function test_rock_vs_scissors()
+        {
+            //Arrange
+            $test_RockPaperScissors = new RockPaperScissors;
+            $first_input = "Rock";
+            $second_input = "Scissors";
+
+
+            //Array
+            $result = $test_RockPaperScissors->playGame($first_input, $second_input);
+
+            //Assert
+            $this->assertEquals("Rock Wins!", $result);
+        }
 
     }
 
