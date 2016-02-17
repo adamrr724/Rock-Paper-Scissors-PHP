@@ -25,6 +25,14 @@ img {
     height: 30em;
 }
 
+.return-btn {
+    float: left;
+}
+
+.return-btn {
+    float:left;
+}
+
 .btn {
     margin-top: 5%;
     display: block;

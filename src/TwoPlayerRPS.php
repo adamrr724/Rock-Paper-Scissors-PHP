@@ -30,7 +30,6 @@ class TwoPlayerRPS
             return "Player 2 Wins!";
         } return "Tie Game!";
     }
-
 }
 
 ?>
