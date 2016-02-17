@@ -2,16 +2,18 @@
 
 class RockPaperScissors
 {
-    function playGame($first_input, $second_input)
+    private $user_input;
+    private $computer_input;
+    // private $first_input;
+    // private $second_input;
+
+    function __construct($user_input)
     {
-        if ($first_input == "Rock" && $second_input == "Scissors" || $first_input == "Paper" && $second_input == "Rock" || $first_input == "Scissors" && $second_input == "Paper") {
-            return "Player 1 Wins!";
-        } elseif ($second_input == "Rock" && $first_input == "Scissors" || $second_input == "Paper" && $first_input == "Rock" || $second_input == "Scissors" && $first_input == "Paper") {
-            return "Player 2 Wins!";
-        } return "Tie Game!";
+        $this->user_input = $user_input;
+        $this->computer_input = $this->getComputerInput();
     }
 
-    function computerPlay($user_input)
+    function getComputerInput()
     {
         $random_num = rand(1, 3);
 
@@ -22,10 +24,29 @@ class RockPaperScissors
         }   else {
             $computer_input = "Scissors";
         }
+        return $computer_input;
+    }
 
-        if ($user_input == "Rock" && $computer_input == "Scissors" || $user_input == "Paper" && $computer_input == "Rock" || $user_input == "Scissors" && $computer_input == "Paper") {
+    function getUserInput()
+    {
+        return $this->user_input;
+    }
+
+    // function playGame($first_input, $second_input)
+    // {
+    //     if ($first_input == "Rock" && $second_input == "Scissors" || $first_input == "Paper" && $second_input == "Rock" || $first_input == "Scissors" && $second_input == "Paper") {
+    //         return "Player 1 Wins!";
+    //     } elseif ($second_input == "Rock" && $first_input == "Scissors" || $second_input == "Paper" && $first_input == "Rock" || $second_input == "Scissors" && $first_input == "Paper") {
+    //         return "Player 2 Wins!";
+    //     } return "Tie Game!";
+    // }
+
+    function computerPlay()
+    {
+
+        if ($this->user_input == "Rock" && $this->computer_input == "Scissors" || $this->user_input == "Paper" && $this->computer_input == "Rock" || $this->user_input == "Scissors" && $this->computer_input == "Paper") {
             return "Player 1 Wins!";
-        } elseif ($computer_input == "Rock" && $user_input == "Scissors" || $computer_input == "Paper" && $user_input == "Rock" || $computer_input == "Scissors" && $user_input == "Paper") {
+        } elseif ($this->computer_input == "Rock" && $this->user_input == "Scissors" || $this->computer_input == "Paper" && $this->user_input == "Rock" || $this->computer_input == "Scissors" && $this->user_input == "Paper") {
             return "Player 2 Wins!";
         } return "Tie Game!";
     }

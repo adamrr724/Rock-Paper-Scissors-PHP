@@ -9,9 +9,9 @@
     <body>
         <div class="container">
             <div class="jumbotron">
-                <h1>Play Rock Paper Scissors!</h1>
+                <h1>Play Rock Paper Scissors against the computer!</h1>
             </div>
-            <p>Fill out the forms with player 1 and 2 inputs.</p>
+            <p>Fill out your choice!</p>
             <form class="form-group" action="/results_computer">
                 <label for="player1">Player 1:</label>
                     <select class="form-control" name="player1" style="width:200px;">
@@ -20,16 +20,9 @@
                         <option>Scissors</option>
                     </select>
                     <br>
-                <label for="player2">Player 2:</label>
-                    <select class="form-control" name="player2" style="width:200px;">
-                        <option>Rock</option>
-                        <option>Paper</option>
-                        <option>Scissors</option>
-                    </select>
-                    <br>
                 <button type="submit" name="button">Submit</button>
             </form>
-            <a class="link" href="/comp">Play against the computer</a>
+            <a href="/">Play a friend</a>
         </div>
     </body>
 </html>
