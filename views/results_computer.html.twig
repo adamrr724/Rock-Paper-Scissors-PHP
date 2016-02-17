@@ -11,10 +11,10 @@
             <div class="jumbotron">
                 <h1>Winner</h1>
             </div>
-            {% if game.computerPlay == "Player 1 Wins!" %}
+            {% if game.computerPlay == "User Wins!" %}
              <h3>{{ game.computerPlay }}</h3>
              <img class="winner" src="https://uberfacts.files.wordpress.com/2012/10/rock-paper-and-scissors.jpeg" alt="drawing of rock beats up paper and scissors" />
-            {% elseif game.computerPlay == "Player 2 Wins!" %}
+            {% elseif game.computerPlay == "Computer Wins!" %}
             <h3>{{ game.computerPlay }}</h3>
             <img class="winner" src="http://data.whicdn.com/images/5392083/large.gif" alt="paper attacking rock" />
             {% else %}
@@ -23,8 +23,8 @@
             {% endif %}
              <br>
              <p>
-                 User (Player 1) Played: {{ game.getUserInput }} <br>
-                 Computer (Player 2) Played: {{ game.computer_input }} 
+                 User Played: {{ game.getUserInput }} <br>
+                 Computer Played: {{ game.computer_input }}
              </p>
              <button type="button" class= "btn btn-info" name="button"><a href="/">Play Again!</a></button>
 

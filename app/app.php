@@ -1,5 +1,6 @@
 <?php
     require_once __DIR__."/../vendor/autoload.php";
+    require_once __DIR__."/../src/TwoPlayerRPS.php";
     require_once __DIR__."/../src/RockPaperScissors.php";
 
     $app = new Silex\Application();
@@ -17,8 +18,8 @@
     });
 
     $app->get('/results', function() use ($app) {
-        $Game = new RockPaperScissors($_GET['player1']);
-        $result = $Game->playGame($_GET['player1'], $_GET['player2']);
+        $result = new TwoPlayerRPS($_GET['player1'], $_GET['player2']);
+
         return $app['twig']->render('results.html.twig', array('results' => $result));
     });
 

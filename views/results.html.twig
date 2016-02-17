@@ -11,17 +11,21 @@
             <div class="jumbotron">
                 <h1>Winner</h1>
             </div>
-            {% if results == "Player 1 Wins!" %}
-             <h3>{{ results }}</h3>
+            {% if results.playGame == "Player 1 Wins!" %}
+             <h3>{{ results.playGame }}</h3>
              <img class="winner" src="https://uberfacts.files.wordpress.com/2012/10/rock-paper-and-scissors.jpeg" alt="drawing of rock beats up paper and scissors" />
-            {% elseif results == "Player 2 Wins!" %}
-            <h3>{{ results }}</h3>
+            {% elseif results.playGame == "Player 2 Wins!" %}
+            <h3>{{ results.playGame }}</h3>
             <img class="winner" src="http://data.whicdn.com/images/5392083/large.gif" alt="paper attacking rock" />
             {% else %}
-                <h3>{{ results }}</h3>
+                <h3>{{ results.playGame }}</h3>
                 <img src="http://www.teampedia.net/wiki/images/0/0b/Rock.png" alt="rock paper scissors drawing" />
             {% endif %}
              <br>
+             <p>
+                 Player 1 Played: {{ results.getFirstInput }} <br>
+                 Player 2 Played: {{ results.getSecondInput }}
+             </p>
              <button type="button" class= "btn btn-info" name="button"><a href="/">Play Again!</a></button>
 
         </div>
