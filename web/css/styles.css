@@ -40,6 +40,10 @@ img {
     margin-right: auto;
 }
 
+.btn-danger {
+    float: left;
+}
+
 .btn:hover {
     background-color: #2952AF;
 }
